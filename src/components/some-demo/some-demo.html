@@ -1,0 +1,8 @@
+<div class="some-demo">
+  <textarea value.bind="note"></textarea>
+  <button type="button" click.trigger="addNote()">Add Note</button>
+
+  <ul>
+    <li repeat.for="text of notes">${text}</li>
+  </ul>
+</div>
