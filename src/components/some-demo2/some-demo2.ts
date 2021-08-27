@@ -9,18 +9,16 @@ export class SomeDemo2{
 
   attaching = () => {
     const animation = this.host.animate(
-        [{ opacity: 1 }, { opacity: 0 }],
-        { duration: 10000 },
+        [{ opacity: 0 }, { opacity: 1 }],
+        { duration: 15000 },
     );
-    console.log(animation);
     return animation.finished;
   }
 
   detaching = () => {
-    console.log("detaching");
     const animation = this.host.animate(
-        [{ transform: 'translateX(-300px)' }, { transform: 'translateX(0)' }],
-        { duration: 50000 },
+        [{ opacity: 1 }, { opacity: 0 }],
+        { duration: 15000 },
     );
     return animation.finished;
   }
