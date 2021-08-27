@@ -2,4 +2,10 @@
   <template repeat.for="component of components">
     <au-compose containerless view-model.bind="component"></au-compose>
   </template>
+
+  <div style="margin:20px">
+    <button type="button" click.trigger="render()">Renderuj</button>
+    <button type="button" click.trigger="rimuv()">Remove</button>
+  </div>
+
 </div>

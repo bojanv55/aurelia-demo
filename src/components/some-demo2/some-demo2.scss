@@ -1,3 +1,14 @@
 .some-demo{
   background-color: blue;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  //animation: opasiti ease-out 3s;
+  //opacity: 0;
+  transform: translateX(10px);
 }
+
+//@keyframes opasiti {
+//  from {opacity: 1;}
+//  to {opacity: 0}
+//}
