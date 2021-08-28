@@ -14,7 +14,7 @@ const config: Configuration = {
     rules: [
       {
         test: /\.ts$/i,
-        use: ['ts-loader', '@aurelia/webpack-loader'],
+        use: ['babel-loader', '@aurelia/webpack-loader'],
         exclude: /node_modules/
       },
       {

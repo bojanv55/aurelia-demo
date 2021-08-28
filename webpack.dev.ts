@@ -10,7 +10,7 @@ interface Configuration extends WebpackConfiguration {
 const config = merge<Configuration>(common,
     {
       mode: 'development',
-      devtool: 'eval',
+      devtool: 'source-map',
       output: {
         pathinfo: true,
         publicPath: '/',
