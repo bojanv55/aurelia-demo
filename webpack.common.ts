@@ -14,22 +14,7 @@ const config: Configuration = {
     rules: [
       {
         test: /\.ts$/i,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-typescript'],
-              plugins: ['babel-plugin-transform-typescript-metadata',
-                [
-                  '@babel/plugin-proposal-decorators',
-                  {
-                    legacy: true
-                  }
-                ]
-              ]
-            }
-          }
-          , '@aurelia/webpack-loader'],
+        use: ['@bojanv55/ts-loader', '@aurelia/webpack-loader'],
         exclude: /node_modules/
       },
       {
