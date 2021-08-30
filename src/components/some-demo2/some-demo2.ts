@@ -1,14 +1,13 @@
-import scss from './some-demo2.module.scss';
-//import * as scss from './some-demo2.module.scss';
+import style from './some-demo2.scss';
 import {SomeApi} from "../../services/some-api";
 
 export class SomeDemo2{
   private tekst: any = {};
   //private stilovi = [scss.someDemo, scss.someDemoPoslije];
-  private stilovi = [scss.someDemo, scss.someDemo_poslije];
+  private someDemoStyles = [style.someDemo, style.someDemo_poslije];
 
-  get cStilovi () {
-    return this.stilovi.join(' ');
+  get someDemoCssClass () {
+    return this.someDemoStyles.join(' ');
   }
 
   constructor(private someApi: SomeApi, private readonly host: Element) {
@@ -16,19 +15,19 @@ export class SomeDemo2{
   }
 
   dodajPoslije = () => {
-    console.log(scss);
-    console.log(scss['some-demo']);
-    this.stilovi.pop();
-    console.log(this.stilovi);
+    console.log(style);
+    console.log(style['some-demo']);
+    this.someDemoStyles.pop();
+    console.log(this.someDemoStyles);
   }
 
   staviPoslije = () => {
-    this.stilovi.push(scss.someDemo_poslije);
-    console.log(scss.radni);
-    console.log(scss.radni__element)
-    console.log(scss.radni__element_modifiKator)
-    console.log(scss.radni__MOJE)
-    console.log(this.stilovi);
+    this.someDemoStyles.push(style.someDemo_poslije);
+    console.log(style.radni);
+    console.log(style.radni__element)
+    console.log(style.radni__element_modifiKator)
+    console.log(style.radni__MOJE)
+    console.log(this.someDemoStyles);
   }
 
   attaching = () => {
