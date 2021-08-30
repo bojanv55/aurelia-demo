@@ -8,8 +8,20 @@
   transform: translateX(10px);
 }
 
-.some-demo--poslije{
+.some-demo_poslije{
   width: 400px;
+}
+
+.radni{
+  height: 400px;
+}
+
+.radni__element{
+  background-color: red;
+}
+
+.radni__element_modifi-kator{
+  background-color: chartreuse;
 }
 
 //@keyframes opasiti {

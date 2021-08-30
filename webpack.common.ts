@@ -26,6 +26,10 @@ const config: Configuration = {
         exclude: /node_modules/
       },
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
@@ -34,8 +38,11 @@ const config: Configuration = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
-              importLoaders: 1
+              modules: {
+                exportLocalsConvention: 'dashes',
+              },
+              importLoaders: 1,
+              sourceMap: true //to dev?
             }
           },
           {
