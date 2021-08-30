@@ -18,6 +18,15 @@ const config = merge<Configuration>(common,
       },
       devServer: {
         host: '0.0.0.0'
+      },
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            enforce: 'pre',
+            use: ['source-map-loader'],
+          }
+        ]
       }
     });
 
